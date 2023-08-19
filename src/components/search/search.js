@@ -1,40 +1,42 @@
-import {AsyncPaginate} from "react-select-async-paginate";
-import { useState } from "react";
-import { GEO_API_URL, geoApiOptions} from "../../api";
-const Search = ({onSearchChange}) => {
+import React, { useState } from "react";
+import { AsyncPaginate } from "react-select-async-paginate";
+import { geoApiOptions, GEO_API_URL } from "../../api";
 
-    const [search, setSearch] = useState(null)
+const Search = ({ onSearchChange }) => {
+  const [search, setSearch] = useState(null);
 
-    const loadOptions = (inputValue) => {
-        return fetch(`${GEO_API_URL}/cities?minPopulation=1000000&namePrefix=${inputValue}`, geoApiOptions)
-        .then(response=>response.json())
-        .then(response=>{
-            return {
-                options: response.data.map((city)=>{
-                    return {
-                        value: `${city.latitude} ${city.longitude}`,
-                        label: `${city.name}, ${city.countryCode}`
-                    }
-                })
-            }
-        }
-            )
-        .catch(err=>console.log(err))
-    }
-
-    const handleOnChange = (searchData) => {
-        setSearch(searchData)
-        onSearchChange(searchData)
-    }
-
-    return (
-        <AsyncPaginate
-        placeholder = "Search for city"
-        debounceTimeout={600}
-        value = {search}
-        onChange={handleOnChange}
-        loadOptions={loadOptions}
-        />
+  const loadOptions = (inputValue) => {
+    return fetch(
+      `${GEO_API_URL}/cities?minPopulation=1000000&namePrefix=${inputValue}`,
+      geoApiOptions
     )
-}
-export default Search
+      .then((response) => response.json())
+      .then((response) => {
+        return {
+          options: response.data.map((city) => {
+            return {
+              value: `${city.latitude} ${city.longitude}`,
+              label: `${city.name}, ${city.countryCode}`,
+            };
+          }),
+        };
+      });
+  };
+
+  const handleOnChange = (searchData) => {
+    setSearch(searchData);
+    onSearchChange(searchData);
+  };
+
+  return (
+    <AsyncPaginate
+      placeholder="Search for city"
+      debounceTimeout={600}
+      value={search}
+      onChange={handleOnChange}
+      loadOptions={loadOptions}
+    />
+  );
+};
+
+export default Search;
