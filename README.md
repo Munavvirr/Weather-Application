@@ -1,3 +1,7 @@
+# Introduction
+
+This is a weather application that is developed using OpenWeatherMap API and GeoDB API offering real-time forecasts for different cities.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
