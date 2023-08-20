@@ -2,6 +2,12 @@
 
 This is a weather application that is developed using OpenWeatherMap API and GeoDB API offering real-time forecasts for different cities.
 
+## Screenshots and Results
+
+![image](https://github.com/Munavvirr/Weather-Application/assets/72682848/e15b232e-e6b8-4910-9901-d7e0da8c3e38)
+
+![image](https://github.com/Munavvirr/Weather-Application/assets/72682848/72e1e833-f4a3-4bb0-8520-ccd41fe82a54)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
