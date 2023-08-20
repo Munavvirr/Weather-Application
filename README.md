@@ -10,7 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Before you run the project, make sure you install the necessary library using the code below on your terminal:
 
-### npm i react-accessible-accordion
+### `npm i react-accessible-accordion`
 
 In the project directory, you can run the following:
 
