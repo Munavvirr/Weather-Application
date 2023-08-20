@@ -2,15 +2,14 @@
   font-size: 23px;
   font-weight: 700;
 }
-
 .daily-item {
-  background-color: #f5f5f5;
+  background-color: white;
   border-radius: 15px;
   height: 40px;
   margin: 5px;
+  display: flex;
   align-items: center;
   cursor: pointer;
-  display: flex;
   font-size: 14px;
   padding: 5px 20px;
 }
@@ -19,8 +18,7 @@
   width: 40px;
 }
 
-.daily-item .day {
-  cursor: inherit;
+.day {
   color: #212121;
   flex: 1 1;
   font-weight: 600;
@@ -28,7 +26,6 @@
 }
 
 .description {
-  cursor: inherit;
   flex: 1 1;
   margin-right: 15px;
   text-align: right;
@@ -41,20 +38,18 @@
 .daily-details-grid {
   grid-row-gap: 0;
   grid-column-gap: 15px;
-  -webkit-column-gap: 15px;
   column-gap: 15px;
   display: grid;
   flex: 1 1;
   grid-template-columns: auto auto;
   padding: 5px 15px;
-  row-gap: 0;
 }
 
 .daily-details-grid-item {
-  align-items: center;
   display: flex;
-  height: 30px;
+  height: 40px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .daily-details-grid-item label:first-child {
@@ -62,5 +57,5 @@
 }
 
 .daily-details-grid-item label:last-child {
-  color: #212121;
+  color: black;
 }
